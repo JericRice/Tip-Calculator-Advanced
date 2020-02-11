@@ -9,136 +9,100 @@
     <TextView
         android:id="@+id/billAmountLabel"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="41dp"
-        android:layout_marginLeft="41dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
+        android:layout_height="69dp"
         android:padding="10dp"
         android:text="Bill Amount"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/billAmountEditText"
+        app:layout_constraintBottom_toTopOf="@+id/percentLabel"
         app:layout_constraintEnd_toStartOf="@+id/billAmountEditText"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/percentLabel"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="41dp"
-        android:layout_marginLeft="41dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
+        android:layout_height="70dp"
         android:padding="10dp"
         android:text="Percent"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/percentTextView"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tipLabel"
+        app:layout_constraintStart_toStartOf="@+id/billAmountLabel"
         app:layout_constraintTop_toBottomOf="@+id/billAmountLabel" />
 
     <TextView
         android:id="@+id/tipLabel"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="41dp"
-        android:layout_marginLeft="41dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
+        android:layout_height="70dp"
         android:padding="10dp"
         android:text="Tip"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/tipTextView"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/totalLabel"
+        app:layout_constraintStart_toStartOf="@+id/percentLabel"
         app:layout_constraintTop_toBottomOf="@+id/percentLabel" />
 
     <TextView
         android:id="@+id/totalLabel"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="41dp"
-        android:layout_marginLeft="41dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
+        android:layout_height="70dp"
         android:padding="10dp"
         android:text="Total"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/totalTextView"
-        app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/roundingLabel"
+        app:layout_constraintStart_toStartOf="@+id/tipLabel"
         app:layout_constraintTop_toBottomOf="@+id/tipLabel" />
 
     <TextView
         android:id="@+id/roundingLabel"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="41dp"
-        android:layout_marginLeft="41dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_height="70dp"
         android:padding="10dp"
         android:text="Rounding"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/roundingRadioGroup"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/roundingRadioGroup" />
+        app:layout_constraintBottom_toTopOf="@+id/splitLabel"
+        app:layout_constraintStart_toStartOf="@+id/totalLabel"
+        app:layout_constraintTop_toBottomOf="@+id/totalLabel" />
 
     <TextView
         android:id="@+id/splitLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="41dp"
-        android:layout_marginLeft="41dp"
-        android:layout_marginEnd="23dp"
-        android:layout_marginRight="23dp"
         android:padding="10dp"
-        android:text="Split Tip"
+        android:text="Split Bill?"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/splitSpinner"
-        app:layout_constraintEnd_toStartOf="@+id/splitSpinner"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/perPersonLabel"
+        app:layout_constraintStart_toStartOf="@+id/roundingLabel"
+        app:layout_constraintTop_toBottomOf="@+id/roundingLabel" />
+
 
     <TextView
         android:id="@+id/perPersonLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="41dp"
-        android:layout_marginLeft="41dp"
-        android:layout_marginEnd="23dp"
-        android:layout_marginRight="23dp"
-        android:layout_marginBottom="8dp"
         android:padding="10dp"
         android:text="Per Person"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/perPersonTextView"
-        app:layout_constraintEnd_toStartOf="@+id/perPersonTextView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/splitLabel"
+        tools:layout_editor_absoluteY="522dp" />
 
     <EditText
         android:id="@+id/billAmountEditText"
-        android:layout_width="0dp"
+        android:layout_width="79dp"
         android:layout_height="40dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="47dp"
-        android:layout_marginEnd="125dp"
-        android:layout_marginRight="125dp"
-        android:layout_marginBottom="8dp"
         android:ems="8"
         android:inputType="textPersonName"
         android:text="100"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/percentSeekBar"
+        app:layout_constraintBottom_toTopOf="@+id/percentTextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/billAmountLabel"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -146,126 +110,111 @@
         android:id="@+id/percentTextView"
         android:layout_width="50dp"
         android:layout_height="40dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        android:layout_marginBottom="45dp"
         android:width="50dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:padding="5dp"
         android:text="15%"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/tipTextView"
+        app:layout_constraintBottom_toTopOf="@+id/tipTextView"
         app:layout_constraintEnd_toStartOf="@+id/percentSeekBar"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/percentLabel"
-        app:layout_constraintTop_toTopOf="@+id/billAmountEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/billAmountEditText" />
 
     <EditText
         android:id="@+id/tipTextView"
-        android:layout_width="0dp"
+        android:layout_width="156dp"
         android:layout_height="40dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="125dp"
-        android:layout_marginRight="125dp"
-        android:layout_marginBottom="45dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:padding="5dp"
         android:text="$15"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/totalTextView"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/totalTextView"
         app:layout_constraintStart_toEndOf="@+id/tipLabel"
-        app:layout_constraintTop_toBottomOf="@+id/billAmountEditText" />
-
+        app:layout_constraintStart_toStartOf="@+id/percentTextView"
+        app:layout_constraintTop_toBottomOf="@+id/percentTextView" />
 
     <EditText
         android:id="@+id/totalTextView"
-        android:layout_width="0dp"
+        android:layout_width="138dp"
         android:layout_height="40dp"
-        android:layout_marginEnd="125dp"
-        android:layout_marginRight="125dp"
-        android:layout_marginBottom="60dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="$115"
         app:layout_constraintBottom_toTopOf="@+id/roundingRadioGroup"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/totalLabel"
-        app:layout_constraintTop_toBottomOf="@+id/percentSeekBar" />
+        app:layout_constraintStart_toStartOf="@+id/tipTextView"
+        app:layout_constraintTop_toBottomOf="@+id/tipTextView" />
 
     <EditText
         android:id="@+id/perPersonTextView"
-        android:layout_width="0dp"
+        android:layout_width="139dp"
         android:layout_height="50dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="88dp"
-        android:layout_marginRight="88dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="$0.00"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/perPersonLabel"
-        app:layout_constraintTop_toBottomOf="@+id/splitSpinner" />
+        app:layout_constraintTop_toTopOf="@+id/perPersonLabel" />
 
     <SeekBar
         android:id="@+id/percentSeekBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
-        android:layout_marginBottom="64dp"
-        app:layout_constraintBottom_toTopOf="@+id/totalTextView"
+        android:layout_width="104dp"
+        android:layout_height="38dp"
+        android:max="30"
+        android:padding="10dp"
+        android:progress="15"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/percentTextView"
-        app:layout_constraintTop_toBottomOf="@+id/billAmountEditText" />
+        app:layout_constraintTop_toTopOf="@+id/percentTextView" />
 
     <RadioGroup
         android:id="@+id/roundingRadioGroup"
-        android:layout_width="243dp"
-        android:layout_height="122dp"
-        android:layout_marginTop="241dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        android:layout_marginBottom="1dp"
+        android:layout_width="141dp"
+        android:layout_height="120dp"
+        android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@+id/splitSpinner"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/roundingLabel"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.494">
+        app:layout_constraintTop_toBottomOf="@+id/totalTextView">
 
         <RadioButton
             android:id="@+id/roundNoneRadioButton"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="RadioButton" />
+            android:checked="true"
+            android:text="None" />
 
         <RadioButton
             android:id="@+id/roundTipRadioButton"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="RadioButton" />
+            android:text="Tip" />
 
         <RadioButton
             android:id="@+id/roundTotalRadioButton"
             android:layout_width="match_parent"
-            android:layout_height="6dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="RadioButton" />
+            android:text="Total" />
     </RadioGroup>
 
     <Spinner
         android:id="@+id/splitSpinner"
-        android:layout_width="0dp"
-        android:layout_height="46dp"
-        android:layout_marginEnd="85dp"
-        android:layout_marginRight="85dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="83dp"
+        android:layout_height="36dp"
+        android:spinnerMode="dropdown"
+        android:text="Split Tip?"
         app:layout_constraintBottom_toTopOf="@+id/perPersonTextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/splitLabel" />
+        app:layout_constraintStart_toEndOf="@+id/splitLabel"
+        app:layout_constraintStart_toStartOf="@+id/perPersonTextView"
+        app:layout_constraintTop_toBottomOf="@+id/roundingRadioGroup" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
